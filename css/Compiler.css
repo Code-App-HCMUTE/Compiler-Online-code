@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+body {
+}
+
+.compiler-hero {
+  position: relative;
+
+  height: 100vh;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+/* control compiler */
+.compiler-control {
+  width: 100%;
+  height: 50px;
+
+  background-color: #ffffff;
+  padding: 5px 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.compiler-control-left {
+}
+.compiler-control-right {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.compiler-control-right .btn-outline {
+  margin-right: 25px;
+}
+/* content compiler */
+.compiler-container {
+  width: 100%;
+  height: 94%;
+  padding: 10px 5px;
+
+  border-radius: 5px;
+  background-color: aliceblue;
+  border: 1px solid #e4e3e3f5;
+}
+.compiler-sub {
+  width: 100%;
+  height: 100%;
+
+  border-radius: 5px;
+
+  background-color: #ffffff;
+
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+
+  display: flex;
+}
+
+
+/*========================================================= left content */
+/* layout */
+.compiler-left-content {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* ================================================ resizing */
+.compiler-resizing {
+  position: relative;
+  height: 100%;
+  width: 5px;
+
+  background-color: #e4e3e38c;
+}
+.compiler-resizing:hover {
+  background-color: rgba(86, 86, 210, 0.322);
+  cursor: e-resize;
+}
+.compiler-resizing::after{
+
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: 0px;
+
+  height: 100%;
+  width: 2px;
+  /* background-color: rgba(86, 86, 210, 0.322); */
+}
+.compiler-resizing::before{
+
+  content: "";
+  position: absolute;
+  right: -2px;
+  top: 0px;
+
+  height: 100%;
+  width: 2px;
+  /* background-color: rgba(86, 86, 210, 0.322); */
+}
+
+/*=========================== edit control  */
+.compiler-edit-control {
+  width: 100%;
+  height: 40px;
+  background-color: #e4e3e38c;
+  display: flex;
+  align-items: center;
+}
+/*=== tab fife */
+.compiler-edit-fife {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  overflow-x: auto;
+}
+.compiler-edit-fife::-webkit-scrollbar {
+  height: 4px;
+}
+.compiler-edit-fife::-webkit-scrollbar-thumb {
+  height: 4px;
+  background-color: rgba(128, 128, 128, 0.247);
+}
+.compiler-edit-fife_item {
+  height: 100%;
+  width: 110px;
+
+  padding: 5px 5px 5px 10px;
+  margin-right: 1px;
+
+  background-color: #aaaaaa21;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgba(0, 0, 0, 0.525);
+
+  cursor: pointer;
+}
+.compiler-edit-fife_item:hover {
+  color: rgba(0, 0, 0, 0.894);
+}
+.edit-fife-icon {
+  font-size: 0.7rem;
+  margin-right: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.edit-fife-control-text {
+  width: 90%;
+  font-size: 0.8rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.edit-fife-icon-close {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+
+  font-size: 0.7rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.edit-fife-icon-close:hover {
+  background-color: rgba(225, 225, 225, 0.5);
+}
+.compiler-edit-fife_item.active {
+  background-color: #ffffff;
+}
+
+/* control header */
+.edit-fife-button {
+  font-size: 0.9rem;
+
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+.edit-fife-button .drop-down {
+  margin-right: 20px;
+}
+.edit-fife-button .btn-outline {
+  margin-right: 20px;
+  font-size: 0.7rem;
+}
+.edit-fife-button .btn-text-icon {
+  margin-right: 7px;
+}
+
+/* =================================edit */
+.compiler-edit-container {
+  position: relative;
+  height: 100%;
+  padding: 0px 0px 10px 0px;
+  overflow: hidden;
+}
+.compiler-edit-address {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: rgba(0, 0, 0, 0.525);
+  box-shadow: rgba(0, 0, 0, 0.123) 0px 2px 20px -3px,
+    rgba(0, 0, 0, 0.105) 0px -20px 20px -4px;
+  height: 30px;
+  width: 100%;
+  overflow-x: auto;
+  z-index: 1;
+}
+
+.compiler-editor-main {
+  padding-right: 5px;
+  margin-top: 35px;
+  height: calc(100% - 30px);
+  width: 100%;
+  overflow: auto;
+}
+.CodeMirror{
+  width: 100%;
+  height: 100%;
+}
+.CodeMirror-vscrollbar::-webkit-scrollbar {
+  /* background-color: rgba(128, 128, 128, 0.155); */
+  width: 5px;
+  border-radius: 5px;
+}
+.CodeMirror-vscrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(128, 128, 128, 0.332);
+  width: 5px;
+  border-radius: 5px;
+}
+.CodeMirror-hscrollbar::-webkit-scrollbar {
+  /* background-color: rgba(128, 128, 128, 0.155); */
+  width: 5px;
+  border-radius: 5px;
+}
+.CodeMirror-hscrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(128, 128, 128, 0.332);
+  width: 5px;
+  border-radius: 5px;
+}
+.compiler-editor-main {
+}
+/* console */
+.compiler-right-content {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+.compiler-console-header {
+  height: 35px;
+
+  width: 100%;
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+}
+.compiler-console-header::-webkit-scrollbar {
+  /* background-color: rgba(128, 128, 128, 0.155); */
+  height: 4px;
+  border-radius: 5px;
+}
+.compiler-console-header::-webkit-scrollbar-thumb {
+  background-color: rgba(128, 128, 128, 0.332);
+  height: 4px;
+  border-radius: 5px;
+}
