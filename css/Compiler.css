@@ -69,7 +69,7 @@ body {
 /* layout */
 .compiler-left-content {
   height: 100%;
-
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -222,37 +222,12 @@ body {
 }
 
 .compiler-editor-main {
+  position: relative;
   padding-right: 5px;
   margin-top: 35px;
   height: calc(100% - 30px);
   width: 100%;
-  overflow: auto;
-}
-.CodeMirror{
-  width: 100%;
-  height: 100%;
-}
-.CodeMirror-vscrollbar::-webkit-scrollbar {
-  /* background-color: rgba(128, 128, 128, 0.155); */
-  width: 5px;
-  border-radius: 5px;
-}
-.CodeMirror-vscrollbar::-webkit-scrollbar-thumb {
-  background-color: rgba(128, 128, 128, 0.332);
-  width: 5px;
-  border-radius: 5px;
-}
-.CodeMirror-hscrollbar::-webkit-scrollbar {
-  /* background-color: rgba(128, 128, 128, 0.155); */
-  width: 5px;
-  border-radius: 5px;
-}
-.CodeMirror-hscrollbar::-webkit-scrollbar-thumb {
-  background-color: rgba(128, 128, 128, 0.332);
-  width: 5px;
-  border-radius: 5px;
-}
-.compiler-editor-main {
+  overflow: hidden;
 }
 /* console */
 .compiler-right-content {

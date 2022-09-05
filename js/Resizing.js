@@ -4,8 +4,8 @@ function Resize() {
   const resize = document.querySelector(".compiler-resizing");
   const containerSubCompiler = document.querySelector(".compiler-sub");
 
-  editDiv.style.width = containerSubCompiler.clientWidth - 300 - 5 + "px";
-  consoleDiv.style.width = "300px";
+  consoleDiv.style.width = "350px";
+  editDiv.style.width = "1200px"
 
   resize.addEventListener("mousedown", initResize, false);
   function initResize() {

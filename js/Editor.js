@@ -1,10 +1,6 @@
 function Editor() {
-  const editorCompiler = document.getElementById("compiler-editor-js");
-  var editor = CodeMirror.fromTextArea(editorCompiler, {
-    lineNumbers: true,
-    mode:  "javascript",
-    tabSize: 4
-  });
+  const editorCompiler = document.querySelector(".compiler-editor-js");
+
 }
 
 export default Editor;
